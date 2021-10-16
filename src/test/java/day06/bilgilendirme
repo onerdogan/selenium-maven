@@ -1,0 +1,30 @@
+- JUnit : En temel framework'tur. Main method devrini bitirir.
+Annotation'lar sayesinde main method olmadan testlerimi execute edebilirim.
+- Annotation : Kucuk bilgi iceren (Meta Data) yapilardir. Kullanildigi bolume ekstra ozellik katar.
+- @Test : Bagimsiz olarak calisabilecek bir test olusturmamizi saglar.
+- @Before : Test baslamadan once yapilmasi gereken hazirliklari yaptigimiz method icin kullanilir.
+Her method'dan once calisir.
+- @BeforeClass : @Before gibidir ancak ondan farkli olarak sadece class'in basinda 1 kez calisir.
+Static olmak zorundadir.
+- @After : Her testten sonra calisir, test yapildiktan sonra kapatma gibi fonksyionlari yerine getirir.
+- @AfterClass : Her class'in sonunda 1 kez calisir, static olmak zorundadir.
+- @Ignore : Yazildigi method'un calistirilmamasini saglar. Testimi calistirildiginda bu method'un
+Ignore old. raporda gorunur.
+- Assertion : If clause olmadan testlerimi yapmamizi saglar.
+- @Ignore annotation can be used in two scenarios as given below:
+If you want to ignore a test method, use @Ignore along with @Test annotation.
+If you want to ignore all the tests of class, use @Ignore annotation at the class level.
+
+
+
+ASERTIONS (Dogrulama) :
+    - JUnite framework'unde test senaryomuzu calistirdiktan sonra bekledigimiz sonuclarin
+    olup olmadigini test etmek icin assert sinifinin fonksiyonlarini kullaniriz.
+
+    - JUnit, belirli kosullari test etmek icin isimleri assert ile baslayan statik method'lari saglar.
+    - Bu method'larla beklenen ve gercek degerleri karsilastirarak testimizi sonuclandiririz.
+    - Bu kiyaslama basarisiz olursa AssertionException ile hata mesaji verilir.
+    - Assertion fail olursa icinde bulundugu testin kalan kismini calistirmaz.
+        Assert.assertEqual(expectedResult, actualResult)
+        Assert.assertTrue(yas>65) => Yasin 65'den buyuk oldugunu test edin. (if-else'den kurtulduk)
+        Assert.assertFalse(isim.equals("Ayse")) => Olumsuz cumlegi test icin kullaniriz.(!'den kurtulduk)
